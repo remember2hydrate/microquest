@@ -14,7 +14,13 @@ export default function App() {
   return (
     <PaperProvider theme={{ ...theme }}>
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: theme.colors.surface }, headerTintColor: theme.colors.text }}>
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: { backgroundColor: theme.colors.surface },
+            headerTintColor: theme.colors.text,
+          }}
+          initialRouteName="Home"
+        >
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Quests" component={QuestScreen} />
           <Stack.Screen name="Profile" component={ProfileScreen} />
